@@ -6,9 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="screen and (max-width: 820px)" href="ipadscreen.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,100;1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
 </head>
 <body>
-    <h1>Home</h1>
-    <a href="/about/">About</a>
+     <nav>
+        <div class="title">Home</div>
+        <a href="./about/index.html">About</a>
+        <a href="./services/index.html">Services</a>            
+        <a class="scroll-button" href="#contact">Contacts</a>
+        </nav>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+          </div>
+          
+          <span onclick="openNav()">
+            <span class="material-icons md-48">menu</span>
+          </span>
+          
+          <script>
+          function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          }
+          function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          }
+          </script>
+    <section>
+        <div class="home">
+            <h1>Bespoke ceramic homewares</h1>
+        </div>
+    </section>
+    <div class="box">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <section id="text">
+        <div class="text">
+            <h2>Our services and sales</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae animi alias impedit vel dolores, 
+            nesciunt neque ipsa illo a corrupti quae temporibus. Natus, possimus maiores a numquam sint qui vel?</p>
+            <a class="butt" href="./services/index.html">SHOP</a>
+        </div>
+        <div id="pic">
+            <div class="pic"></div>
+        </div>
+    </section>
+    <section class="cards">
+        <div>
+            <ul class="cardsul">
+                <li id="butt1">
+                    <a class="butt1" href="./services/#text">
+                        <h2>Service 1</h2>
+                        <p>We offer a range of services and sales.</p>
+                    </a>
+                </li>
+                <li id="butt2">
+                    <a class="butt1" href="./services/#text2">
+                        <h2>Service 2</h2>
+                        <p>We offer a range of services and sales.</p>
+                    </a>
+                </li>
+                <li id="butt3">
+                    <a class="butt1" href="./services/#text3">
+                        <h2>Service 3</h2>
+                        <p>We offer a range of services and sales.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <p>Please submit any enquires in the contact box below.</p>
+        </div>
+        <div class="container">
+            <form action="action_page.php">
+          
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+          
+              <label for="enquire">Enquire here</label>
+              <textarea id="enquire" name="enquire" placeholder="Submit your enquiry here.." style="height:200px"></textarea>
+          
+              <input type="submit" value="Submit">
+          
+            </form>
+          </div>
+    </section>
+        <footer>
+            <div>
+                <p>©Copyright Madeleine Verheyen</p>
+            </div>
+        </footer>
+</section>
 </body>
+<script>
+    // console.log("foobar") lets you log "foobar" to the console. console is a keyword, and .log is a function which accepts 1 or more parameters. 
+    // console.log("foobar");
+
+
+    // Use document.querySelectorAll to get all the scroll button elements
+    // Move that NodeList of elements to an array using the Array.from() function
+    // Iterate over that array of elements with the forEach function, where we call each element "button"
+    Array.from(document.querySelectorAll("a.scroll-button")).forEach(button => {
+        // IN THE ITERATOR
+
+        // add an eventlistener for the click event on this button element
+        button.addEventListener('click', (event) => {
+            // IN THE EVENT LISTENER CALLBACK FUNCTION
+
+            // prevent the click event on the a tag from taking you there anyway;
+            event.preventDefault();
+            // define a variable called href which stores this button element's href attribute value;
+            const href = button.getAttribute('href');
+
+            // perform the action of scrolling this element into view
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    })
+</script>
 </html>

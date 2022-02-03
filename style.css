@@ -1,3 +1,259 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d3937e;
+}
+nav {
+  margin-top: 0;
+  height: 70px;
+  width: 100%;
+  background-color: #feebe7;
+  color: #943502;
+  font-family: "Lato", sans-serif;
+  font-weight: bolder;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav a {
+  text-decoration: none;
+  color: #943502;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0 5rem;
+  line-height: 24px;
+}
+a:hover {
+  text-decoration: underline;
+}
+.home {
+  background-image: url(./home/home-hero.jpeg);
+  background-size: cover;
+  background-position-y: 60%;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 h1 {
-    background: pink;
+  margin: 0%;
+  font-style: italic;
+  font-size: 40px;
+  font-weight: bold;
+  color: #feebe7;
+  font-family: "Lato", sans-serif;
+}
+#text {
+  display: flex;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 690px;
+  padding-left: 160px;
+}
+h2 {
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-decoration: underline;
+}
+p {
+  color: white;
+  font-family: "Lato", sans-serif;
+  padding-bottom: 15px;
+}
+.butt {
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  padding: 20px 30px;
+  font-family: "Lato", sans-serif;
+}
+.butt:hover {
+  background-color: white;
+  color: #943502;
+  text-decoration: none;
+}
+#pic {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.pic {
+  background-image: url(./home/text.jpeg);
+  background-position-x: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 400px;
+}
+.box {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.box span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2.5px solid white;
+  border-right: 2.5px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+.cards {
+  background-color: #f8be9a;
+  height: 500px;
+  width: 100%;
+}
+.cardsul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  padding-left: 100px;
+  padding-right: 150px;
+}
+ul li {
+  list-style: none;
+  border: 2px solid #feebe7;
+}
+#butt1 {
+  background-image: url(./home/card.jpeg);
+  background-size: contain;
+  height: 400px;
+  width: 250px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+#butt2 {
+  background-image: url(./home/card2.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  height: 400px;
+  width: 250px;
+}
+#butt3 {
+  background-image: url(./home/card3.jpeg);
+  background-size: contain;
+  height: 400px;
+  width: 250px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+.butt1 {
+  background-color: #feebe7;
+  color: #943502;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  height: 80px;
+  width: 100%;
+  text-align: center;
+}
+.butt1 h2 {
+  color: #943502;
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 7px;
+  margin-bottom: 0;
+}
+.butt1 p {
+  color: #943502;
+  margin-top: 7px;
+}
+.contact {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  background-color: #feebe7;
+  font-family: "Lato", sans-serif;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #d3937e;
+  color: white;
+  padding: 20px 30px;
+  border: 1px solid white;
+  font-size: 17px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+
+/* Hover submit button */
+input[type="submit"]:hover {
+  background-color: white;
+  color: #943502;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #d3937e;
+  padding: 20px;
+  width: 50%;
+  font-family: "Lato", sans-serif;
+  padding-bottom: 100px;
+  padding-left: 380px;
+}
+footer {
+  background-color: #feebe7;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: #943502;
 }

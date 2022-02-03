@@ -5,10 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="screen and (max-width: 820px)" href="media.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,100;1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
 </head>
 <body>
-    <h1>about</h1>
-    <a href="/">Home</a>
+    <section>
+        <nav>   
+            <div>About</div>
+            <a href="../index.html">Home</a>
+            <a href="../services/index.html">Services</a>            
+            <a href="../index.html#contact">Contacts</a>
+        </nav>
+    </section>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+      
+      <span onclick="openNav()">
+        <span class="material-icons md-48">menu</span>
+      </span>
+      
+      <script>
+      function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+      }
+      function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+    <section>
+        <div class="home">
+            <h1>About our company</h1>
+        </div>
+    </section>
+    <section id="text">
+        <div id="pic">
+            <div class="pic"></div>
+        </div>
+        <div class="text">
+            <h2>The story of our journey</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae animi alias impedit vel dolores, 
+            nesciunt neque ipsa illo a corrupti quae temporibus. Natus, possimus maiores a numquam sint qui vel? Lorem ipsum dolor 
+            sit amet consectetur adipisicing elit. Ea magnam magni in nostrum? Saepe corrupti mollitia, ipsam pariatur distinctio 
+            reprehenderit deserunt neque facilis corporis sed praesentium repellendus, inventore tenetur quasi! Lorem ipsum dolor, 
+            sit amet consectetur adipisicing elit. Dolore, sequi veritatis assumenda porro inventore ipsum incidunt sunt qui illum 
+            ipsam accusantium expedita placeat est iure aperiam, ut vitae quo. Eos! Lorem ipsum dolor sit amet, consectetur 
+            adipisicing elit. Laudantium illo consequatur iure asperiores recusandae ut unde ipsam natus eius eaque quo sed 
+            errorad, in ex exercitationem eos quis? Ad!</p>
+        </div>
+    </section>
+</section>
+<footer>
+    <div>
+        <p>©Copyright Madeleine Verheyen</p>
+    </div>
+</footer>
+</section>
 </body>
 </html>
