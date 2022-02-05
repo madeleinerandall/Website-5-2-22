@@ -1,14 +1,11 @@
-@media screen and (max-width: 1200px) {
+.sidenav {
+  width: 0;
+}
+.material-icons.md-48 {
+  display: none;
 }
 
 @media screen and (max-width: 920px) {
-  /* THIS ISN'T WORKING FOR SOME REASON 820 + !! */
-  .sidenav {
-    display: none;
-  }
-  .material-icons.md-48 {
-    display: none;
-  }
   .text {
     padding-left: 50px;
   }
@@ -20,13 +17,7 @@
     padding-left: 250px;
   }
 }
-@media screen and (min-width: 775px) and (max-width: 820px) {
-  .sidenav {
-    display: none;
-  }
-  .material-icons.md-48 {
-    display: none;
-  }
+@media screen and (max-width: 820px) {
   .home {
     background-position-x: 50%;
   }
@@ -45,9 +36,18 @@
   }
 }
 
+@media (min-width: 776px) {
+  .sidenav {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 775px) {
   nav {
     display: none;
+  }
+  .material-icons.md-48 {
+    display: block;
   }
   .home {
     background-position-x: 50%;
@@ -55,6 +55,7 @@
   .text {
     padding: 15px 15px;
     padding-left: 30px;
+    padding-bottom: 30px;
   }
   .box {
     top: 80%;
@@ -111,7 +112,7 @@
     height: 1000px;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 130px;
+    padding-left: 0%;
   }
   #butt1 {
     height: 800px;
@@ -147,9 +148,15 @@
     padding-left: 170px;
     padding-right: 0%;
   }
+  .text {
+    padding-left: 15px;
+  }
+  .cardsul {
+    padding-right: 0%;
+  }
 }
 
-@media screen and (min-width: 451px) and (max-width: 551px) {
+@media screen and (max-width: 551px) {
   h1 {
     padding-left: 10px;
   }
@@ -221,7 +228,7 @@
     padding-left: 50px;
   }
   .cardsul {
-    padding-left: 125px;
+    padding-left: 5px;
   }
   footer > div > p {
     padding-bottom: 0%;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" media="screen and (max-width: 820px)" href="ipadscreen.css">
+    <link rel="stylesheet" href="ipadscreen.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,10 +25,10 @@
 
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="./index.html">Home</a>
+            <a href="./about/index.html">About</a>
+            <a href="./services/index.html">Services</a>
+            <a href="./index.html#contact">Contact</a>
           </div>
           
           <span onclick="openNav()">
@@ -94,7 +94,7 @@
             <p>Please submit any enquires in the contact box below.</p>
         </div>
         <div class="container">
-            <form action="action_page.php">
+            <form>
           
               <label for="fname">First Name</label>
               <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -123,7 +123,10 @@
 <script>
     // console.log("foobar") lets you log "foobar" to the console. console is a keyword, and .log is a function which accepts 1 or more parameters. 
     // console.log("foobar");
-
+    document.querySelector('form').addEventListener('submit', e => {
+        e.preventDefault();
+        window.alert('Success! Form submitted.');
+    })
 
     // Use document.querySelectorAll to get all the scroll button elements
     // Move that NodeList of elements to an array using the Array.from() function
